@@ -15,9 +15,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    protected $guarded = [];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -40,6 +38,11 @@ class User extends Authenticatable
     public function getAvatar($size)
     {
         return "https://avatars.dicebear.com/api/avataaars/" . $this->email . ".svg?options[h]=" . $size;
+    }
+
+    public function getAvatarAttribute($value)
+    {
+        return asset('storage/' . $value);
     }
 
     public function timeline()

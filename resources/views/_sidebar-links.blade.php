@@ -5,7 +5,7 @@
 	<li><a class="font-bold text-lg mb-4 block" href="{{ route('explore') }}">
 		Explore
 	</a></li>
-	<li><a class="font-bold text-lg mb-4 block" href="#">
+	{{-- <li><a class="font-bold text-lg mb-4 block" href="#">
 		Notifications
 	</a></li>
 	<li><a class="font-bold text-lg mb-4 block" href="#">
@@ -16,7 +16,7 @@
 	</a></li>
 	<li><a class="font-bold text-lg mb-4 block" href="#">
 		Lists
-	</a></li>
+	</a></li> --}}
 	<li><a class="font-bold text-lg mb-4 block" href="{{ route('profile', auth()->user()) }}">
 		Profile
 	</a></li>

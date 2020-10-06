@@ -15,6 +15,8 @@
             <h5 class="font-bold mb-4">{{ $tweet->user->name }}</h5>
         </a>
 
-        <p class="text-sm">{{ $tweet->body }}</p>
+        <p class="text-sm mb-3">{{ $tweet->body }}</p>
+
+        <x-like-buttons :tweet="$tweet"/>
     </div>
 </div>
